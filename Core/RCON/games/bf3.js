@@ -284,8 +284,8 @@ var protocol = module.exports = {
         return obj;
     }
   },
-  auth: function(recon, password) {
-    recon.send('login.hashed', function(response) {
+  auth: function(rcon, password) {
+    rcon.send('login.hashed', function(response) {
       var salt = '', _salt = response.salt
 
       for (var i=0; i < _salt.length; i+=2) {
@@ -293,8 +293,8 @@ var protocol = module.exports = {
       }
 
       var hashedPass = crypto.createHash('md5').update(salt).update(password).digest('hex').toUpperCase()
-      recon.send('login.hashed ' + hashedPass, function(response) {
-        recon.emit('authed', response)
+      rcon.send('login.hashed ' + hashedPass, function(response) {
+        rcon.emit('authed', response)
       })
     })
   },

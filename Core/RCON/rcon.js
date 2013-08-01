@@ -3,29 +3,29 @@ var net = require('net'),
     EventEmitter = require('eventemitter2').EventEmitter2
 
 
-var client, recon, protocol, sequenceId = 0;
+var client, rcon, protocol, sequenceId = 0;
 
-var Recon = EventEmitter;
+var Rcon = EventEmitter;
 
-Recon.prototype._write = function(command, cb) {
+Rcon.prototype._write = function(command, cb) {
   var packet = protocol.create(command);
   client.write(packet.buffer)
-  recon.once('response.' + packet.id, function(response) {
+  rcon.once('response.' + packet.id, function(response) {
     cb(protocol.types(response, command.split(' ')[0]))
   })
 }
 
-Recon.prototype.send = function(command, cb) {
-  recon._write(command, function(response) {
+Rcon.prototype.send = function(command, cb) {
+  rcon._write(command, function(response) {
     if (response.status !== 'OK') {
-      return recon.emit('_error', response.status)
+      return rcon.emit('_error', response.status)
     }
 
     if (cb) cb(response)
   })
 }
 
-Recon.prototype.connect = function(opts, cb) {
+Rcon.prototype.connect = function(opts, cb) {
   protocol = require('./games/' + opts.game)
   client = net.connect(opts.port, opts.host)
   
@@ -33,14 +33,14 @@ Recon.prototype.connect = function(opts, cb) {
 
   protocol.parse(client, function(response) {
     if (response.event) {
-      recon.emit('event', response)
+      rcon.emit('event', response)
     } else {
-      recon.emit('response.' + response.id, response)
+      rcon.emit('response.' + response.id, response)
     }
   })
 
   client.on('close', function() {
-    recon.emit('end')
+    rcon.emit('end')
     if (opts.reconnect) {
       reconnect()
     }
@@ -50,12 +50,12 @@ Recon.prototype.connect = function(opts, cb) {
     console.log(err)
   })
 
-  recon.on('event', function(response) {
-    recon.emit(response.words[0], {command: response.words[0], response: protocol.types(response)})
+  rcon.on('event', function(response) {
+    rcon.emit(response.words[0], {command: response.words[0], response: protocol.types(response)})
   })
 
-  recon.on('_error', function(err) {
-    recon.emit('error', err)
+  rcon.on('_error', function(err) {
+    rcon.emit('error', err)
   })
 
   function reconnect() {
@@ -66,23 +66,23 @@ Recon.prototype.connect = function(opts, cb) {
 
   function connect() {
     if (opts.password) {
-      protocol.auth(recon, opts.password)
+      protocol.auth(rcon, opts.password)
     }
 
-    recon.once('authed', function(response) {
+    rcon.once('authed', function(response) {
       if (opts.password && opts.watchEvents) {
-        recon.send('admin.eventsEnabled true')
+        rcon.send('admin.eventsEnabled true')
       }
-      recon.emit('connect')
+      rcon.emit('connect')
       cb()
     })
   }
 
 }
 
-Recon.prototype.end = function() {
+Rcon.prototype.end = function() {
   client.end()
 }
 
 
-recon = module.exports = new Recon({wildcard: true})
+rcon = module.exports = new Rcon({wildcard: true})

@@ -5,6 +5,8 @@
     <ignored path="gswat-node.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/bf3.js" changelist="b95dfe11-0d74-4bfb-a880-a4c0b8aa5dd4" time="1375378438298" ignored="false" />
+    <file path="/a.dummy" changelist="b95dfe11-0d74-4bfb-a880-a4c0b8aa5dd4" time="1375379025932" ignored="false" />
+    <file path="/rcon.js" changelist="b95dfe11-0d74-4bfb-a880-a4c0b8aa5dd4" time="1375379274797" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,25 +38,63 @@
       <file leaf-file-name="rcon.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Core/RCON/rcon.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="25" selection-start="894" selection-end="894" vertical-scroll-proportion="0.0">
+            <state line="12" column="4" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/eventemitter2/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/eventemitter2/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="2.9583333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/eventemitter2/test/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eventemitter2.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/eventemitter2/lib/eventemitter2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="79" selection-start="361" selection-end="361" vertical-scroll-proportion="0.3622393">
+            <state line="20" column="43" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bf3.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="bf3.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Core/RCON/games/bf3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="300" column="46" selection-start="7805" selection-end="7805" vertical-scroll-proportion="0.0">
+            <state line="280" column="78" selection-start="7254" selection-end="7254" vertical-scroll-proportion="0.41163558">
               <folding />
             </state>
           </provider>
@@ -139,6 +179,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RCON" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -264,20 +308,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Core/RCON/games/bf3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="46" selection-start="7805" selection-end="7805" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/RCON/rcon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="25" selection-start="894" selection-end="894" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="119" selection-start="368" selection-end="368" vertical-scroll-proportion="-8.75">
@@ -285,9 +315,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/eventemitter2/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/eventemitter2/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="2.9583333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/eventemitter2/test/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/eventemitter2/lib/eventemitter2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="79" selection-start="361" selection-end="361" vertical-scroll-proportion="0.3622393">
+        <state line="20" column="43" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/RCON/rcon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="4" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/RCON/games/bf3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="280" column="78" selection-start="7254" selection-end="7254" vertical-scroll-proportion="0.41163558">
           <folding />
         </state>
       </provider>
