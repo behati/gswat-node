@@ -82,19 +82,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="server.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="43" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0">
+            <state line="22" column="55" selection-start="349" selection-end="349" vertical-scroll-proportion="0.3622393">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bf3.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="bf3.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Core/RCON/games/bf3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="280" column="78" selection-start="7254" selection-end="7254" vertical-scroll-proportion="0.41163558">
+            <state line="280" column="78" selection-start="7254" selection-end="7254" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -111,9 +111,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/Core/RCON/rcon.js" />
         <option value="$PROJECT_DIR$/Core/RCON/games/bf3.js" />
+        <option value="$PROJECT_DIR$/server.js" />
       </list>
     </option>
   </component>
@@ -345,13 +345,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="43" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/RCON/rcon.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="4" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
@@ -361,7 +354,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Core/RCON/games/bf3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="280" column="78" selection-start="7254" selection-end="7254" vertical-scroll-proportion="0.41163558">
+        <state line="280" column="78" selection-start="7254" selection-end="7254" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="55" selection-start="349" selection-end="349" vertical-scroll-proportion="0.3622393">
           <folding />
         </state>
       </provider>
