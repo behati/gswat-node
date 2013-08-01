@@ -2,7 +2,7 @@
   "name": "gswat-node",
   "version": "0.1.0",
   "description": "PureBattleifeld Server Admin Tool on Node.js",
-  "main": "server.js",
+  "main": "app.js",
   "dependencies": {
     "binary": "~0.2.6",
     "eventemitter2": "~0.4.1"
@@ -10,7 +10,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "repository": "",
   "author": "Pure Battlefield",
