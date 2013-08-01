@@ -1,5 +1,5 @@
 /**
- *
+ *   Pure Battlefield GSWAT - Node.js port 0,0,1
  */
 var express = require('express');
 var passport = require('passport');
