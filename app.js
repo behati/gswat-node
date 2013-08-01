@@ -1,23 +1,23 @@
 /**
  *
  */
-var rcon = require('./Core/RCON/rcon')
+var express = require('express');
+var passport = require('passport');
 
-var options = {
-    game: 'bf3',
-    host: 'host',
-    port: 0000,
-    password: 'password',
-    watchEvents: true,
-    reconnect: false
-}
+// Load configurations
+var env = process.env.NODE_ENV || 'development';
+var config = require('./config/config')[env];
+var auth = require('./config/middlewares/authorization');
 
-rcon.connect(options, function() {
-    rcon.send('serverInfo', function(response) {
-        console.log(response)
-    })
-})
+var app = express();
+// express settings
+require('./config/express')(app,config,passport);
 
-rcon.on('connect', function() {
-    console.log('connected')
-})
+// Bootstrap routes
+require('./config/routes')(app,passport,auth);
+
+// Start the app by listening on <port>
+var port = process.env.PORT || 3000;
+app.listen(port);
+console.log('GSWAT-node started on ' + port);
+

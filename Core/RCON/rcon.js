@@ -27,7 +27,7 @@ Rcon.prototype.send = function(command, cb) {
 
 Rcon.prototype.connect = function(opts, cb) {
   protocol = require('./games/' + opts.game)
-  client = net.connect(opts.port, opts.host)
+  client = net.connect(opts.ServerPort, opts.ServerIP)
   
   client.on('connect', connect);
 
@@ -60,17 +60,17 @@ Rcon.prototype.connect = function(opts, cb) {
 
   function reconnect() {
     setTimeout(function() {
-      client.connect(opts.port, opts.host)
+      client.connect(opts.ServerPort, opts.ServerIP)
     }, 4*1000)
   }
 
   function connect() {
-    if (opts.password) {
-      protocol.auth(rcon, opts.password)
+    if (opts.Password) {
+      protocol.auth(rcon, opts.Password)
     }
 
     rcon.once('authed', function(response) {
-      if (opts.password && opts.watchEvents) {
+      if (opts.Password && opts.watchEvents) {
         rcon.send('admin.eventsEnabled true')
       }
       rcon.emit('connect')
