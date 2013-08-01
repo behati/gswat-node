@@ -1,5 +1,4 @@
 var express = require('express');
-var viewHelpers = require('./middlewares/view');
 
 module.exports = function(app,config,passport){
 	app.set('showStackError',true);
@@ -15,8 +14,6 @@ module.exports = function(app,config,passport){
 	app.use(express.logger('dev'));
 
 	app.configure(function(){
-		// dynamic helpers
-		app.use(viewHelpers(config));
 
 		// cookieParser should be above session
 		app.use(express.cookieParser());
@@ -24,13 +21,6 @@ module.exports = function(app,config,passport){
 		// bodyParser should be above methodOverride
 		app.use(express.bodyParser());
 		app.use(express.methodOverride());
-
-		// express/mongo session storage
-		app.use(express.session(
-			{
-				secret: 'gswat-secret'
-			}
-		));
 
 		app.use(express.favicon());
 
