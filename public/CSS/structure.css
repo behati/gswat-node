@@ -1,84 +1,144 @@
-/* line 1, ../../scss/structure.scss */
+/* line 3, ../../scss/structure.scss */
+body {
+  padding-top: 54px;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 9, ../../scss/structure.scss */
+  body {
+    padding-top: 50px;
+  }
+
+  /* line 12, ../../scss/structure.scss */
+  .masthead {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  /* line 16, ../../scss/structure.scss */
+  .masthead h1 {
+    font-size: 100px;
+  }
+
+  /* line 19, ../../scss/structure.scss */
+  .masthead p {
+    font-size: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  /* line 24, ../../scss/structure.scss */
+  .subhead {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: left;
+  }
+}
+/* line 31, ../../scss/structure.scss */
+i {
+  margin-right: 5px;
+}
+
+/* line 35, ../../scss/structure.scss */
+#header-alert {
+  position: absolute;
+  width: 100%;
+}
+
+/* line 40, ../../scss/structure.scss */
+#header-alert {
+  display: none;
+}
+/* line 43, ../../scss/structure.scss */
+#header-alert .container {
+  padding: 20px 0 0;
+  width: 25%;
+}
+
+/* line 49, ../../scss/structure.scss */
+.actions {
+  text-align: right;
+}
+/* line 52, ../../scss/structure.scss */
+.actions.row {
+  margin-bottom: 10px;
+}
+/* line 56, ../../scss/structure.scss */
+.actions .btn:not(:first-of-type) {
+  margin-left: 5px;
+}
+
+/* line 62, ../../scss/structure.scss */
+form.form-horizontal .btn {
+  margin-right: 5px;
+}
+/* line 67, ../../scss/structure.scss */
+form.form-horizontal .input-url .input-group-addon {
+  word-break: keep-all;
+}
+/* line 72, ../../scss/structure.scss */
+form.form-horizontal .form-actions {
+  padding-top: 10px;
+}
+
+/* line 78, ../../scss/structure.scss */
 .player-name {
   font-weight: bold;
 }
 
-/* line 5, ../../scss/structure.scss */
-#content .page {
-  background: #FFF;
-  min-height: 400px;
-}
-
-/* line 10, ../../scss/structure.scss */
-html {
-  background: #CCC;
-}
-
-/* line 13, ../../scss/structure.scss */
+/* line 82, ../../scss/structure.scss */
 .team {
   font-weight: bold;
   text-transform: uppercase;
 }
 
-/* line 17, ../../scss/structure.scss */
+/* line 87, ../../scss/structure.scss */
 .team.squad {
   color: #28AE00;
 }
 
-/* line 20, ../../scss/structure.scss */
+/* line 91, ../../scss/structure.scss */
 #chatContents {
   overflow: scroll;
   overflow-x: visible;
   overflow-y: scroll;
 }
-/* line 24, ../../scss/structure.scss */
+/* line 96, ../../scss/structure.scss */
 #chatContents p {
   margin: 0 0 2px;
 }
 
-/* line 28, ../../scss/structure.scss */
+/* line 101, ../../scss/structure.scss */
 #chat-quick-settings {
   position: absolute;
   z-index: 5;
   display: none;
 }
 
-/* line 33, ../../scss/structure.scss */
-.team.team-US {
-  color: #0000ff;
-}
-
-/* line 36, ../../scss/structure.scss */
-.nav-bar .nav-bar-inner a:hover .element, .nav-bar .nav-bar-inner > ul.menu > li a:hover {
-  color: rgba(45, 173, 237, 0.8);
-}
-
-/* line 39, ../../scss/structure.scss */
-#header li i, #header li a {
-  font-size: 12pt;
-  line-height: 15px;
-}
-
-/* line 45, ../../scss/structure.scss */
+/* line 109, ../../scss/structure.scss */
 #server-chat-page #chat-settings h2 {
   display: none;
 }
-/* line 49, ../../scss/structure.scss */
+/* line 113, ../../scss/structure.scss */
 #server-chat-page .grid.page-region {
   margin: 0;
 }
-/* line 53, ../../scss/structure.scss */
+/* line 117, ../../scss/structure.scss */
 #server-chat-page .hide-server-msgs .server-message {
   display: none;
 }
 
-/* line 58, ../../scss/structure.scss */
+/* line 124, ../../scss/structure.scss */
 .team.team-RU {
   color: #CE2323;
 }
+/* line 128, ../../scss/structure.scss */
+.team.team-US {
+  color: #0000ff;
+}
 
-/* line 61, ../../scss/structure.scss */
-.page {
-  max-width: 940px;
-  margin: 0 auto;
+/* line 135, ../../scss/structure.scss */
+footer .pull-right a {
+  padding-left: 5px;
 }
