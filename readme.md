@@ -1,16 +1,16 @@
-# GSWAT-Node
+# GSWAT NodeJS
 
-This is a port of the ASP.NET MVC (C#) based GSWAT Battlefield Server Administration tool to Node.js - all credit goes to the PureBattlefield Developers.
+NodeJS build of GSWAT
+
+### Recommended IDE
+
+It is recommended to use an IntelliJ idea, doesn't matter which flavor: http://www.jetbrains.com/products.html
 
 ### Installation
 
 
-* Install Node.js
+* Install Node.js - http://nodejs.org/
 * Navigate to the gswat-node directory in a shell and run `npm install` to grab the dependencies.
-* Start gswat-node by running `node app.js`
+* Start gswat-node by running `node server`
 
 To avoid conflicts gswat-node runs on Port 3000 by default, you can change this in the app.js file or by setting a PORT property for your corresponding environment in the config/config.js file.
-
-*** 
--
-Enjoy! 
