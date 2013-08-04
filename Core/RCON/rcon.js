@@ -7,6 +7,16 @@ var client, rcon, protocol, sequenceId = 0;
 
 var Rcon = EventEmitter;
 
+// In-memory currently connected server info
+Rcon.prototype.currServer = {
+    game: 'bf3',   // RCON protocol to load
+    ServerIP: '',
+    ServerPort: 0000,
+    Password: '',
+    watchEvents: true,    // enable events for chat, kills etc.
+    reconnect: false   // disables automatic reconnect
+}
+
 Rcon.prototype._write = function(command, cb) {
   var packet = protocol.create(command);
   client.write(packet.buffer)
@@ -52,6 +62,9 @@ Rcon.prototype.connect = function(opts, cb) {
 
   rcon.on('event', function(response) {
     rcon.emit(response.words[0], {command: response.words[0], response: protocol.types(response)})
+      if(response.command != "serverInfo") {
+    console.log(response.words[0], {command: response.words[0], response: protocol.types(response)});
+      }
   })
 
   rcon.on('_error', function(err) {
@@ -61,7 +74,7 @@ Rcon.prototype.connect = function(opts, cb) {
   function reconnect() {
     setTimeout(function() {
       client.connect(opts.ServerPort, opts.ServerIP)
-    }, 4*1000)
+    }, 4000)
   }
 
   function connect() {
@@ -73,6 +86,7 @@ Rcon.prototype.connect = function(opts, cb) {
       if (opts.Password && opts.watchEvents) {
         rcon.send('admin.eventsEnabled true')
       }
+      rcon.currServer = opts;
       rcon.emit('connect')
       cb()
     })

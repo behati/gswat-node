@@ -289,6 +289,13 @@ var protocol = module.exports = {
             }
         return obj;
         break;
+        case 'vars.serverName':
+            obj = {
+                status: words[0],
+                name: words[1]
+            }
+            return obj;
+        break;
       default:
         obj = {
           status: words[0]
