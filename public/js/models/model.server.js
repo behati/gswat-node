@@ -41,7 +41,6 @@
 				}
 			});
 		},
-
 		update_settings: function(){
 			var model = this;
 			var data = this.toJSON();

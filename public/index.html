@@ -20,8 +20,6 @@
                 '/js/libraries/mustache-0.7.3.js',
                 ichUrl,
                 '/CSS/font-awesome.min.css',
-                '/js/libraries/jquery-ui-1.10.1.custom.min.js',
-                '/CSS/themes/base/jquery-ui-1.10.1.custom.min.css',
                 '/js/libraries/bootstrap-3.0.0.min.js',
                 '/CSS/structure.css',
                 '/js/libraries/toe-1.2.min.js',
@@ -92,7 +90,9 @@
                             <li><a href="#coming-soon"><i class="icon-list"></i> Players</a></li>
                             <li><a href="#settings"><i class="icon-cog"></i> Settings</a></li>
                         </ul>
+
                         <ul class="nav pull-right">
+
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> Account <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -326,8 +326,35 @@
             </div>
             <div class="page-region">
                 <div class="page-region-content row">
-                    <div class="span6"><div id="chat-settings"></div></div>
-                    <div class="span6"><div id="server-settings"></div></div>
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#servers" data-toggle="tab">Servers</a></li>
+                        <li><a href="#chatsettings" data-toggle="tab">Chat Settings</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="servers">
+
+                            <table class="table table-striped">
+                               <thead>
+                                <tr><th width="88%"></th><th></th></tr>
+                               </thead>
+                                <tbody>
+                                {{#.}}
+                               <tr><td><i class="icon-hdd"></i> {{name}} <span style="font-size:11px; color: grey;"> - {{ServerIP}}:{{ServerPort}}</span></td>
+                                   <td><a class="btn serverConnectBtn"><i class="icon-play-circle"></i></a> <a class="btn btn-info"><i class="icon-info-sign"></i></a> <a class="btn btn-danger"><i class="icon-remove"></i></a></td></tr>
+                                {{/.}}
+                                </tbody>
+                            </table>
+
+                            <div class="pull-right">
+                            <a class="btn btn-success" id="addServerbtn" href="#">Add Server</a>
+                            </div>
+
+                            <div class="span6"><div id="server-settings"></div></div></div>
+                        <div class="tab-pane" id="chatsettings"> <div class="span6"><div id="chat-settings"></div></div></div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -387,7 +414,6 @@
         <h2>Server</h2>
         <form id="server-settings-form" class="form-horizontal">
             <fieldset>
-                <legend>Connection Settings</legend>
                 <div class="row">
                     <div class="control-group span6">
                         <label for="ServerIP">Server IP</label>

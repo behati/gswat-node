@@ -2,20 +2,57 @@
 	_.extend(window.GSWAT.prototype.view_definitions,{
 		settings: Backbone.View.extend({
 			id: 'settings',
+            events: {
+                'click #addServerbtn' : 'add_server',
+                'click .serverConnectBtn' : 'switch_server'
+            },
 
 			initialize: function(){
+                this.model.on("change:last_fetch", this.render, this);
 				this.subviews = {};
-				this.subviews.server_settings_view = PBF.get({view: {name: 'server_settings'},model: {name: 'server_model'}});
+				//this.subviews.server_settings_view = PBF.get({view: {name: 'server_settings'},model: {name: 'server_model'}});
 				var chat_model = PBF.get({model: {name: 'chat_model'}});
 				this.subviews.chat_settings = PBF.get({view: {name: 'chat_settings'},model: chat_model});
 			},
 
 			render: function(){
-				this.$el.html(ich.tpl_settings());
+                var servers = this.model.get('serverlist');
+				this.$el.html(ich.tpl_settings(servers));
 				this.render_sub_views();
 				this.delegateEvents();
 			},
+            add_server: function(event) {
 
+
+            },
+            switch_server: function(event) {
+                var ele = $(event.currentTarget)
+                var id = ele.parent().siblings(':first').text();
+                // spaghetti-code splitting
+                var s = id.split('- ');
+                var key = s[1].split(':');
+
+                var data = {
+                    ServerIP: key[0],
+                    ServerPort: key[1]
+                }
+
+                var view = this;
+
+                $.ajax({
+                    type: 'PUT',
+                    data: data,
+                    url: '/api/server/setactive',
+                    success: function(success){
+                        $('.serverConnectBtn').removeClass('btn-success');
+                        ele.toggleClass('btn-success');
+                        $('#content').prepend('<div class="alert alert-success"> <button type="button" class="close" data-dismiss="alert">&times;</button> Successfully connected to ' + s[0] + '</div>').fadeIn(400);
+                    },
+                    error: function(error) {
+                        PBF.alert({type: 'error',title: 'An error occurred:',message: error.responseText});
+                    }
+                });
+            },
 			render_sub_views: function(){
 				var view = this;
 				_.each(view.subviews,function(sub_view){

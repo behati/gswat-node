@@ -10,4 +10,7 @@ module.exports = function(app,passport,auth){
     app.get('/api/server/players',server.getPlayerList);
     app.get('/api/server/help',server.getAdminHelp);
     app.get('/api/server/maplist',server.listMaps);
+    app.get('/api/server/list',server.listServers);
+    app.get('/api/server/get',server.getServer);
+    app.put('/api/server/setactive',server.setActiveServer);
 };

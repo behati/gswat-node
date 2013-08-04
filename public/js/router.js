@@ -96,7 +96,7 @@
 				PBF.CDN + 'js/views/view.settings.js'
 			];
 			PBF.load(files,function(){
-				var settings = PBF.get({view:{name:'settings'}});
+				var settings = PBF.get({view:{name:'settings'}, model:{name:'settings'}});
 				PBF.render(settings);
 			});
 		},
