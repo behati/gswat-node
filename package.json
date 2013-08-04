@@ -1,26 +1,44 @@
 {
-  "name": "gswat-node",
-  "version": "0.0.1",
-  "description": "PureBattlefield Server Admin Tool on Node.js",
-  "main": "server.js",
-  "dependencies": {
-    "binary": "~0.2.6",
-    "eventemitter2": "~0.4.1",
-    "express": "latest",
-    "underscore": "latest",
-    "passport": "latest",
-    "passport-local": "latest",
-    "azure": "latest"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": "",
-  "author": "Pure Battlefield",
-  "readmeFilename": "readme.md",
-  "engines": {
-    "node": "0.4.x"
-  }
+	"name": "gswat-node",
+	"version": "0.0.1",
+	"description": "PureBattlefield Server Admin Tool on Node.js",
+	"author": "Pure Battlefield",
+	"contributors": [
+		{
+			"name": "Enzo Martin",
+			"email": "enzo.r.martin@gmail.com"
+		},
+		{
+			"name": "Jeppe Terndrup",
+			"email": "jeppe.terndrup@gmail.com"
+		}
+	],
+	"main": "server.js",
+	"dependencies": {
+		"binary": "~0.2.6",
+		"eventemitter2": "~0.4.1",
+		"express": "latest",
+		"moment": "latest",
+		"underscore": "latest",
+		"jade": "latest",
+		"passport": "latest",
+		"passport-local": "latest",
+		"passport-google": "latest",
+		"azure": "latest"
+	},
+	"devDependencies": {
+		"mu2": "latest",
+		"grunt": "latest",
+		"grunt-develop": "latest",
+		"grunt-contrib-sass": "latest",
+		"grunt-contrib-jade": "latest",
+		"grunt-contrib-watch": "latest",
+		"grunt-contrib-compass": "latest"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js"
+	},
+	"repository": "https://github.com/Pure-Battlefield/gswat-node",
+	"readmeFilename": "readme.md"
 }
