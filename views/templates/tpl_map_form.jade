@@ -1,0 +1,30 @@
+.page-header
+	h1 {{^Name}}Create New Maplist{{/Name}}{{Name}}
+	.page-content
+		form#maplist-form.form-horizontal
+			fieldset
+				legend
+					| {{^Name}}Create a new maplist{{/Name}}{{#Name}}Edit the {{Name}} maplist{{/Name}}
+				.control-group
+					label.control-label(for='MaplistName') Maplist Name
+					.control
+						input(name='Name', type='text', placeholder='Name of the maplist', value='{{Name}}')
+						| {{tpl_error_required}}
+				.control-group
+					label.control-label(for='ServerName') Server Name
+					.control
+						input(name='ServerName', type='text', placeholder='Name of the server', value='{{ServerName}}')
+				.control-group
+					label.control-label(for='MinPlayers') Minimum players supported
+					.control
+						input(name='MinPlayers', type='text', value='{{MinPlayers}}')
+						p.help-block.control-label.error-number Please enter a number between 0 and 64
+						| {{tpl_error_minimum_maximum}}
+				.control-group
+					label.control-label(for='MaxPlayers') Maximum players supported
+					.control
+						input(name='MaxPlayers', type='text', value='{{MaxPlayers}}')
+						p.help-block.control-label.error-number Please enter a number between 0 and 64
+						| {{tpl_error_maximum_minimum}}
+				button.btn.btn-primary.submit(type='submit') Submit
+				a.btn(href='#map-rotation') Cancel

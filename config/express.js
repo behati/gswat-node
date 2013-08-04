@@ -13,6 +13,11 @@ module.exports = function(app,config,passport){
 	app.use(express.static(config.root + '/public'));
 	app.use(express.logger('dev'));
 
+	// set views path, template engine and default layout
+	app.set('view options',{layout: false});
+	app.set('views',config.root + '/views');
+	app.set('view engine','jade');
+
 	app.configure(function(){
 
 		// cookieParser should be above session

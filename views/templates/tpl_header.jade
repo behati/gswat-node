@@ -1,0 +1,51 @@
+.navbar.navbar-inverse.navbar-fixed-top
+	.container
+		a.navbar-brand(href='#home')
+			| {{name}}
+			small  {{version}}
+		button.navbar-toggle(data-target='.nav-collapse', data-toggle='collapse', type='button')
+			span.icon-bar
+			span.icon-bar
+			span.icon-bar
+		.nav-collapse.navbar-inverse-collapse.collapse
+			ul.nav.navbar-nav
+				li
+					a(href='#home')
+						i.icon-home
+						| Home
+				li
+					a(href='#chat')
+						i.icon-comments
+						| Chat
+				li
+					a(href='#map-rotation')
+						i.icon-globe
+						| Map Rotation
+				li
+					a(href='#coming-soon')
+						i.icon-list
+						| Players
+				li
+					a(href='#settings')
+						i.icon-cog
+						| Settings
+			ul.nav.navbar-nav.pull-right
+				li.dropdown
+					a.dropdown-toggle(href='#', data-toggle='dropdown')
+						i.icon-user
+						| Account
+						b.caret
+					ul.dropdown-menu
+						li
+							a#login(href='#')
+								i.icon-google-plus
+								| Login/Register
+						li
+							a#logout(href='#logout')
+								i.icon-signout
+								| Logout
+						li.divider
+						li
+							a(href='#account')
+								i.icon-wrench
+								| My Account

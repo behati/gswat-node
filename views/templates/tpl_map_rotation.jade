@@ -1,0 +1,38 @@
+.page-header
+	h1
+		| Map Rotation Lists
+		small.pull-right
+			a.btn.btn-primary(href='#map-rotation/new') Create Maplist
+	.page-content
+		table.table.table-bordered.table-striped.table-hover
+			thead
+				tr
+					th(style='width: 29%;') Name
+					th Server Name
+					th Map Count
+					th Min/Max Players
+					th Activated
+					th Actions
+			tbody
+				| {{#.}}
+				tr
+					td {{Name}}
+					td {{ServerName}}
+					td.map-list-count {{MapCount}}
+					td.map-list-player-criterias {{MinPlayers}} / {{MaxPlayers}}
+					td.table-status-icons
+						i(class='icon-{{#active}}ok-sign{{/active}}{{^active}} remove-sign{{/active}}')
+					td.table-actions
+						a.btn(href='#map-rotation/view/{{slugged_name}}')
+							i.icon-external-link
+							| View
+						a.btn(href='#map-rotation/edit/{{slugged_name}}')
+							i.icon-pencil
+							| Edit
+						button.btn(class='{{#active}}disabled{{/active}}',data-id='{{slugged_name}}', data-action='activate')
+							i.icon-play-circle
+							| Activate
+						button.btn.btn-danger(data-id='{{slugged_name}}', data-action='delete')
+							i.icon-trash
+							| Delete
+				| {{/.}}

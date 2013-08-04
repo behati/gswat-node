@@ -1,0 +1,13 @@
+| {{#.}}
+li(class='{{#Server}}server-message{{/Server}} team-{{MessageType}} {{#SquadName}}squad{{/SquadName}}')
+	| [
+	span.timestamp {{MessageTimeStamp}}
+	| ]
+	| [
+	span.team(class='team-{{MessageType}}') {{MessageType}}
+	| {{#SquadName}}
+	span.team.squad {{SquadName}}
+	| {{/SquadName}}]
+	span.player-name {{Speaker}}:
+	span.message {{Text}}
+| {{/.}}

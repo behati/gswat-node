@@ -1,0 +1,20 @@
+.row
+	.page-header
+		h1 Sign in
+			small.pull-right
+				a.btn(href='#register') Register
+		.page-content
+			form#login-form
+				fieldset
+					legend Sign in or create an account
+					.row
+						.control-group
+							label.control-label(for='Username') Username
+							.control
+								input(name='Username', type='text', placeholder='Username')
+								| {{tpl_error_required}}
+						.control-group
+							label.control-label(for='Password') Password
+							.control
+								input(name='Password', type='password')
+						button.btn.btn-primary.submit(type='submit') Submit
