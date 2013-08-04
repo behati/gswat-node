@@ -1,29 +1,36 @@
 h2 Chat
-	form#chat-settings-form
-		fieldset
-			legend Chat Display Settings
+form#chat-settings-form
+	fieldset
+		legend Chat Display Settings
+		.checkbox
+			label#chat-auto-refresh-field
+				input(data-field='auto_refresh', type='checkbox')
+				| Auto-refresh
+		#toggle-message-types
 			.checkbox
-				label#chat-auto-refresh-field
-					input(data-field='auto_refresh', type='checkbox') Auto-refresh
-			#toggle-message-types
-				.checkbox
-					label#chat-servers-msgs-field
-						input(data-field='show_server_msgs', type='checkbox') Show Server MSGs
-				.checkbox
-					label#chat-global-msgs-field
-						input(data-field='show_global_msgs', type='checkbox') Show Global MSGs
-				.checkbox
-					label#chat-ru-msgs-field
-						input(data-field='show_ru_msgs', type='checkbox') Show RU MSGs
-				.checkbox
-					label#chat-us-msgs-field
-						input(data-field='show_us_msgs', type='checkbox') Show US MSGs
-				.checkbox
-					label#chat-squad-msgs-field
-						input(data-field='show_squad_msgs', type='checkbox') Show Squad MSGs
-			.control-group
-				label(for='chat-interval') Refresh Interval in Seconds
-				.input-group
-					input#chat-interval-field.input-block-level(name='chat-interval', data-field='interval', type='text', value='{{interval}}')
-					span.input-group-btn
-						button.btn.btn-primary.submit(type='submit') Submit
+				label#chat-servers-msgs-field
+					input(data-field='show_server_msgs', type='checkbox')
+					| Show Server MSGs
+			.checkbox
+				label#chat-global-msgs-field
+					input(data-field='show_global_msgs', type='checkbox')
+					| Show Global MSGs
+			.checkbox
+				label#chat-ru-msgs-field
+					input(data-field='show_ru_msgs', type='checkbox')
+					| Show RU MSGs
+			.checkbox
+				label#chat-us-msgs-field
+					input(data-field='show_us_msgs', type='checkbox')
+					| Show US MSGs
+			.checkbox
+				label#chat-squad-msgs-field
+					input(data-field='show_squad_msgs', type='checkbox')
+					| Show Squad MSGs
+		.control-group
+			label(for='chat-interval')
+			| Refresh Interval in Seconds
+			.input-group
+				input#chat-interval-field.input-block-level(name='chat-interval', data-field='interval', type='text', value='{{interval}}')
+				span.input-group-btn
+					button.btn.btn-primary.submit(type='submit') Submit
