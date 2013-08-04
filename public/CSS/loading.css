@@ -1,0 +1,12 @@
+﻿/* Global */
+
+/* Content */
+#content .page {
+    background:#FFF;
+    min-height:400px;
+}
+
+#loading {
+	min-height:0;
+	margin-top:10px;
+}
