@@ -70,23 +70,30 @@ module.exports = function(grunt) {
 			}
 		},
 		watch: {
-			scripts: {
+			css: {
 				files: [
-					'scss/**',
-					'views/adminloader',
-					'views/templates/**',
+					'scss/**'
+				],
+				tasks: [
+					'compass:dev',
+					'watch:css'
+				]
+			},
+			template_files: {
+				files: [
+					'views/**',
+					'views/**/**',
 					'public/js/views/**',
 					'public/js/models/**'
 				],
 				tasks: [
-					'compass:dev',
 					'build_includes',
 					'jade',
-					'watch'
-				],
-				options: {
-					nospawn: true
-				}
+					'watch:template_files'
+				]
+			},
+			options: {
+				nospawn: true
 			}
 		}
 	});
@@ -111,13 +118,23 @@ module.exports = function(grunt) {
 		return true;
 	});
 
-	// Default development task
-	grunt.registerTask('default', function(){
+	// Builds the template files and includes
+	grunt.registerTask('template_files', function(){
 		var tasks = [
-			'compass:dev',
 			'build_includes',
 			'jade',
-			'watch'
+			'watch:template_files'
+		];
+
+		grunt.option('force', true);
+		grunt.task.run(tasks);
+	});
+
+	// Compiles the SCSS files with compass and outputs CSS
+	grunt.registerTask('css', function(){
+		var tasks = [
+			'compass:dev',
+			'watch:css'
 		];
 
 		grunt.option('force', true);

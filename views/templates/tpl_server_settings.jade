@@ -1,0 +1,16 @@
+h2 Server
+	form#server-settings-form.form-horizontal
+		fieldset
+			.row
+				.control-group.span6
+					label(for='ServerIP') Server IP
+					input.input-block-level(tabindex='1', name='ServerIP', data-field='server_ip', type='text', value='{{ServerIP}}')
+					label(for='ServerPort') Server Port
+					input.input-block-level(tabindex='2', name='ServerPort', data-field='server_port', type='text', value='{{ServerPort}}')
+				.control-group.span6
+					label(for='Password') Server Password
+					input.input-block-level(tabindex='3', name='Password', data-field='server_password', type='text', value='{{Password}}')
+					label(for='OldPassword') Old Server Password
+					input.input-block-level(tabindex='4', name='OldPassword', data-field='server_old_password', type='text', value='{{OldPassword}}')
+				.control-group
+					button.btn.btn-primary.submit(type='submit') Submit

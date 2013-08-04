@@ -24,6 +24,7 @@
 		"passport": "latest",
 		"passport-local": "latest",
 		"passport-google": "latest",
+		"win-spawn": "latest",
 		"azure": "latest"
 	},
 	"devDependencies": {

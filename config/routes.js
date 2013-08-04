@@ -2,6 +2,9 @@ module.exports = function(app,passport,auth){
 	// Controllers
     var server = require('../core/controllers/servercontroller');
 
+	// Page routes
+	app.get('/',server.index);
+
 	// API Routes
     // Server
     app.get('/api/server',server.serverInfo);

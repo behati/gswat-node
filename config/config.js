@@ -1,5 +1,5 @@
 var common = {
-    appName:'gswat-node',
+    appName:'GSWAT',
 	version:'0.0.1'
 };
 

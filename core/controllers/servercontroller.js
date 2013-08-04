@@ -1,6 +1,11 @@
 var rcon = require('../RCON/rcon');
 var AzureStorage = require('../data/AzureStorage');
 
+// Main Page
+exports.index = function(req,res){
+	res.render('layouts/default');
+};
+
 /* Returns the serverinfo */
 exports.serverInfo = function (req, res) {
     rcon.send('serverInfo', function (response) {
