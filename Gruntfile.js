@@ -5,31 +5,25 @@ module.exports = function(grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		compass: {
+		less: {
 			dist: {
 				options: {
-					sassDir: 'scss',
-					cssDir: 'public/css',
-					fontsDir: 'public/fonts',
-					specify: ['scss/structure.scss'],
-					javascriptsDir: 'public/js',
-					imagesDir: 'public/img',
-					outputStyle: 'compressed',
-					clean: true,
-					environment: 'production'
+					paths: 'less',
+					compress: true,
+					yuicompress: true
+				},
+				files: {
+					'public/css/structure.css': 'less/structure.less'
 				}
 			},
 			dev: {
-				options: {
-					sassDir: 'scss',
-					cssDir: 'public/css',
-					fontsDir: 'public/fonts',
-					specify: ['scss/structure.scss'],
-					javascriptsDir: 'public/js',
-					imagesDir: 'public/img',
-					outputStyle: 'expanded',
-					relativeAssets: true,
-					environment: 'development'
+				options:{
+					paths: 'less',
+					relativeUrls: true,
+					dumpLineNumbers: 'comments'
+				},
+				files: {
+					'public/css/structure.css': 'less/structure.less'
 				}
 			}
 		},
@@ -72,10 +66,10 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: [
-					'scss/**'
+					'less/**'
 				],
 				tasks: [
-					'compass:dev',
+					'less:dev',
 					'watch:css'
 				]
 			},
@@ -100,7 +94,7 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-develop');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-compass');
+	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-jade');
 
 	// Add the JADE includes
@@ -133,7 +127,7 @@ module.exports = function(grunt) {
 	// Compiles the SCSS files with compass and outputs CSS
 	grunt.registerTask('css', function(){
 		var tasks = [
-			'compass:dev',
+			'less:dev',
 			'watch:css'
 		];
 
@@ -143,7 +137,7 @@ module.exports = function(grunt) {
 
 	// Production task
 	grunt.registerTask('release', [
-		'compass:dist',
+		'less:dist',
 		'build_includes',
 		'jade'
 	]);

@@ -31,10 +31,9 @@
 		"mu2": "latest",
 		"grunt": "latest",
 		"grunt-develop": "latest",
-		"grunt-contrib-sass": "latest",
+		"grunt-contrib-less": "latest",
 		"grunt-contrib-jade": "latest",
-		"grunt-contrib-watch": "latest",
-		"grunt-contrib-compass": "latest"
+		"grunt-contrib-watch": "latest"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
