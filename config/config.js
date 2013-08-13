@@ -26,7 +26,7 @@ module.exports = {
 		common:common
     },
     azure: {
-        account: '',
-        accesskey: ''
+        account: 'youraccount',
+        accesskey: 'yourpassword'
     }
 };
