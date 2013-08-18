@@ -7,6 +7,8 @@
 				'click #chat-toggle-options': 'quick_settings'
 			},
 
+			title: 'Server Chat',
+
 			id: 'server-chat-page',
 
 			className: 'page',

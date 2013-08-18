@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 					yuicompress: true
 				},
 				files: {
-					'public/css/structure.css': 'less/structure.less'
+					'public/css/main.css': 'less/main.less'
 				}
 			},
 			dev: {
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 					dumpLineNumbers: 'comments'
 				},
 				files: {
-					'public/css/structure.css': 'less/structure.less'
+					'public/css/main.css': 'less/main.less'
 				}
 			}
 		},

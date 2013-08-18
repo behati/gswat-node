@@ -27,7 +27,7 @@
 		defaults: {
 			year     : '0',
 			copyright: 'GSWAT',
-			github   : 'https://github.com/Pure-Battlefield/gswat'
+			github   : 'https://github.com/Pure-Battlefield/gswat-node'
 		},
 
 		initialize: function(){

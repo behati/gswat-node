@@ -68,6 +68,8 @@
 		coming_soon: Backbone.View.extend({
 			id: 'coming-soon',
 
+			title: 'Coming Soon!',
+
 			render: function(){
 				this.$el.html(ich.tpl_coming_soon());
 			}
@@ -75,6 +77,8 @@
 
 		loading: Backbone.View.extend({
 			el: '#content',
+
+			title: 'Loading',
 
 			render: function(){
 				this.$el.html(ich.tpl_loading());

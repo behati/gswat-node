@@ -1,31 +1,20 @@
-﻿//TODO: Split these into multiple files and such
-// Globals
-body {
-    padding-top: 54px;
-    position: relative;
+﻿// Globals
+@media screen and (min-width: @screen-desktop) {
+    body {
+		padding-top: 54px;
+    }
 }
 
-@media screen and (min-width: 768px) {
-    body {
-        padding-top: 50px;
-    }
-    .masthead {
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
-    .masthead h1 {
-        font-size: 100px;
-    }
-    .masthead p {
-        font-size: 30px;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-    .subhead {
-        padding-top: 60px;
-        padding-bottom: 60px;
-        text-align: left;
-    }
+body {
+	#logout,
+	&.logged-in #login {
+		display:none;
+	}
+
+	&.logged-in #logout,
+	#login {
+		display:block;
+	}
 }
 
 i {
@@ -46,96 +35,69 @@ i {
     }
 }
 
-.actions {
-    text-align: right;
-
-    &.row {
-        margin-bottom: 10px;
-    }
-
-    .btn:not(:first-of-type) {
-        margin-left: 5px;
-    }
-}
-
-form.form-horizontal {
-    .btn {
-        margin-right: 5px;
-    }
-
-    .input-url {
-        .input-group-addon {
-            word-break: keep-all;
-        }
-    }
-
-    .form-actions {
-        padding-top: 10px;
-    }
-}
-
-// GSWAT
-.player-name {
-    font-weight: bold;
-}
-
-.team {
-    font-weight: bold;
-    text-transform:uppercase;
-
-	.squad {
-		color: #28AE00;
-	}
-}
-
-#chatContents {
-    overflow:scroll;
-    overflow-x:visible;
-    overflow-y:scroll;
-
-    p {
-        margin: 0 0 2px;
-    }
-}
-
-#chat-quick-settings {
-    position:absolute;
-    z-index:5;
-    display:none;
-}
-
-#server-chat-page {
-    #chat-settings {
-        h2 {
-            display:none;
-        }
-    }
-
-    .grid.page-region {
-        margin: 0;
-    }
-
-    .hide-server-msgs {
-        .server-message {
-            display: none;
-        }
-    }
-}
-
-.team {
-    &.team-RU {
-        color: #CE2323;
-    }
-
-    &.team-US {
-        color: #0000ff;
-    }
-}
-
+// Footer
 footer {
+	display:none;
+	padding: 30px 0;
+	margin-top: 70px;
+	border-top: 1px solid #e5e5e5;
+	background-color: #f5f5f5;
+
     .pull-right {
         a {
             padding-left: 5px;
         }
     }
+}
+
+
+// Tables
+table {
+	.table-status-icons {
+		font-size:20px;
+		text-align:center;
+
+		.icon-ok-sign {
+			color:#006400;
+		}
+
+		.icon-remove-sign {
+			color:#ff0000;
+		}
+	}
+
+	&.table tbody > tr > td {
+		vertical-align: middle;
+	}
+}
+
+// Forms
+form {
+	&.form-horizontal {
+		.input-url {
+			.input-group-addon {
+				word-break: keep-all;
+			}
+		}
+
+		.form-actions {
+			padding-top: 10px;
+		}
+	}
+
+	.help-block {
+		display:none;
+	}
+
+	.has-error {
+		&.number .error-number,
+		&.required .error-required {
+			display:block;
+		}
+	}
+}
+
+// Buttons
+.btn + .btn {
+	margin-left: 5px;
 }

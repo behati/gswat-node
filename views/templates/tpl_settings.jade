@@ -1,39 +1,41 @@
-.page.padding10
-	.page-header
-		h1 Settings
-		.page-region
-			.page-region-content.row
-				ul.nav.nav-tabs
-					li.active
-						a(href='#servers', data-toggle='tab') Servers
-					li
-						a(href='#chatsettings', data-toggle='tab') Chat Settings
-				.tab-content
-					#servers.tab-pane.active
-						table.table.table-striped
-							thead
-								tr
-									th(width='88%')
-									th
-							tbody
-								| {{#.}}
-								tr
-									td
-										i.icon-hdd
-										| {{name}}
-										span(style='font-size: 11px; color: grey;')  - {{ServerIP}}:{{ServerPort}}
-									td
-										a.btn.serverConnectBtn
-											i.icon-play-circle
-										a.btn.btn-info
-											i.icon-info-sign
-										a.btn.btn-danger
-											i.icon-remove
-								| {{/.}}
-						.pull-right
-							a#addServerbtn.btn.btn-success(href='#') Add Server
-						.span6
-							#server-settings
-					#chatsettings.tab-pane
-						.span6
-							#chat-settings
+.row
+	.col-lg-12
+		.page-header
+			h1 Settings
+				small.pull-right
+					a#addServerbtn.btn.btn-success(href='#') Add Server
+		.page-content
+			ul.nav.nav-tabs
+				li.active
+					a(href='#servers', data-toggle='tab') Servers
+				li
+					a(href='#chatsettings', data-toggle='tab') Chat Settings
+			.tab-content
+				#servers.tab-pane.active
+					table.table.table-striped
+						thead
+							tr
+								th Name
+								th IP
+								th Actions
+						tbody
+							| {{#.}}
+							tr
+								td {{name}}
+								td {{ServerIP}}:{{ServerPort}}
+								td
+									a.btn.btn-default.serverConnectBtn
+										i.icon-play-circle
+										| Connect
+									a.btn.btn-info
+										i.icon-info-sign
+										| View
+									a.btn.btn-danger
+										i.icon-trash
+										| Delete
+							| {{/.}}
+				#chatsettings.tab-pane
+					.col-12.col-lg-6
+						#server-settings
+					.col-12.col-lg-6
+						#chat-settings
