@@ -1,0 +1,182 @@
+@media screen and (min-width: 992px) {
+  /* line 3, /home/jt/Documents/Projects/gswat-node/less/structure.less */
+  body {
+    padding-top: 54px;
+  }
+}
+/* line 9, /home/jt/Documents/Projects/gswat-node/less/structure.less */
+body #logout,
+body.logged-in #login {
+  display: none;
+}
+/* line 14, /home/jt/Documents/Projects/gswat-node/less/structure.less */
+body.logged-in #logout,
+body #login {
+  display: block;
+}
+/* line 20, /home/jt/Documents/Projects/gswat-node/less/structure.less */
+i {
+  margin-right: 5px;
+}
+/* line 24, /home/jt/Documents/Projects/gswat-node/less/structure.less */
+#header-alert {
+  position: absolute;
+  width: 100%;
+}
+/* line 29, /home/jt/Documents/Projects/gswat-node/less/structure.less */
+#header-alert {
+  display: none;
+}
+/* line 32, /home/jt/Documents/Projects/gswat-node/less/structure.less */
+#header-alert .container {
+  padding: 20px 0 0;
+  width: 25%;
+}
+/* line 39, /home/jt/Documents/Projects/gswat-node/less/structure.less */
+footer {
+  display: none;
+  padding: 30px 0;
+  margin-top: 70px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+}
+/* line 47, /home/jt/Documents/Projects/gswat-node/less/structure.less */
+footer .pull-right a {
+  padding-left: 5px;
+}
+/* line 56, /home/jt/Documents/Projects/gswat-node/less/structure.less */
+table .table-status-icons {
+  font-size: 20px;
+  text-align: center;
+}
+/* line 60, /home/jt/Documents/Projects/gswat-node/less/structure.less */
+table .table-status-icons .icon-ok-sign {
+  color: #006400;
+}
+/* line 64, /home/jt/Documents/Projects/gswat-node/less/structure.less */
+table .table-status-icons .icon-remove-sign {
+  color: #ff0000;
+}
+/* line 69, /home/jt/Documents/Projects/gswat-node/less/structure.less */
+table.table tbody > tr > td {
+  vertical-align: middle;
+}
+/* line 78, /home/jt/Documents/Projects/gswat-node/less/structure.less */
+form.form-horizontal .input-url .input-group-addon {
+  word-break: keep-all;
+}
+/* line 83, /home/jt/Documents/Projects/gswat-node/less/structure.less */
+form.form-horizontal .form-actions {
+  padding-top: 10px;
+}
+/* line 88, /home/jt/Documents/Projects/gswat-node/less/structure.less */
+form .help-block {
+  display: none;
+}
+/* line 93, /home/jt/Documents/Projects/gswat-node/less/structure.less */
+form .has-error.number .error-number,
+form .has-error.required .error-required {
+  display: block;
+}
+/* line 101, /home/jt/Documents/Projects/gswat-node/less/structure.less */
+.btn + .btn {
+  margin-left: 5px;
+}
+/* line 1, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page {
+  position: relative;
+}
+/* line 4, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page .page-header {
+  margin: 0 0 20px;
+}
+/* line 7, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page .page-header h1 {
+  margin-top: 0;
+}
+/* line 12, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page #chat-quick-settings {
+  position: absolute;
+  z-index: 5;
+  display: none;
+  top: 40px;
+  width: 100%;
+  background: #FFF;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 10px;
+}
+/* line 24, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page #chat-settings h2 {
+  display: none;
+}
+/* line 30, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page .hide-server-msgs .server-message {
+  display: none;
+}
+/* line 36, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page .hide-us-msgs .team-US {
+  display: none;
+}
+/* line 42, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page .hide-ru-msgs .team-RU {
+  display: none;
+}
+/* line 48, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page .hide-global-msgs .team-all {
+  display: none;
+}
+/* line 54, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page .hide-squad-msgs .squad {
+  display: none;
+}
+/* line 59, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page .player-name {
+  font-weight: bold;
+}
+/* line 63, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page .team {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 67, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page .team .squad {
+  color: #28AE00;
+}
+/* line 71, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page .team.team-RU {
+  color: #CE2323;
+}
+/* line 75, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page .team.team-US {
+  color: #0000ff;
+}
+/* line 80, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page #chat-contents-ul {
+  margin: 0;
+  list-style: none;
+}
+/* line 85, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page #chat-contents {
+  overflow: scroll;
+  overflow-x: visible;
+  overflow-y: scroll;
+  min-height: 200px;
+  max-height: 600px;
+}
+/* line 92, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page #chat-contents p {
+  margin: 0 0 2px;
+}
+/* line 96, /home/jt/Documents/Projects/gswat-node/less/chat.less */
+#server-chat-page #chat-contents li {
+  margin: 0 0 2px;
+}
+/* line 2, /home/jt/Documents/Projects/gswat-node/less/settings.less */
+#settings h2 {
+  display: none;
+}
+/* line 3, /home/jt/Documents/Projects/gswat-node/less/map-rotation.less */
+#map-rotation .table .map-list-player-criterias,
+#map-rotation .table .map-list-count {
+  text-align: center;
+}

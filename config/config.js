@@ -26,7 +26,7 @@ module.exports = {
 		common:common
     },
     azure: {
-		account: 'devgswatenzo',
-        accesskey: 'zAm4nwdwBdH7V/2Lq61zUmy77omV3H6Y8iIqJTrNY4gI+gPWBTi1Grm4fZ3unfEqgw05fSa1rmRmugU9O6/O8A=='
+		account: '',
+        accesskey: ''
     }
 };
