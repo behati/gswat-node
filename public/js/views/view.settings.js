@@ -2,10 +2,13 @@
 	_.extend(window.GSWAT.prototype.view_definitions,{
 		settings: Backbone.View.extend({
 			id: 'settings',
+
             events: {
                 'click #addServerbtn' : 'add_server',
                 'click .serverConnectBtn' : 'switch_server'
             },
+
+			title: 'Settings',
 
 			initialize: function(){
                 this.model.on("change:last_fetch", this.render, this);

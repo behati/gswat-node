@@ -1,127 +1,73 @@
-/* line 3, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
-body {
-  padding-top: 54px;
-  position: relative;
-}
 @media screen and (min-width: 768px) {
-  /* line 9, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
-  body {
-    padding-top: 50px;
-  }
-  /* line 12, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
-  .masthead {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-  /* line 16, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
-  .masthead h1 {
-    font-size: 100px;
-  }
-  /* line 19, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
-  .masthead p {
-    font-size: 30px;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-  /* line 24, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
-  .subhead {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    text-align: left;
-  }
+    /* line 4, E:\GitHub\gswat-node\less\structure.less */
+    body {
+        padding-top: 54px;
+    }
+    /* line 7, E:\GitHub\gswat-node\less\structure.less */
+    .masthead {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    /* line 11, E:\GitHub\gswat-node\less\structure.less */
+    .masthead h1 {
+        font-size: 100px;
+    }
+    /* line 14, E:\GitHub\gswat-node\less\structure.less */
+    .masthead p {
+        font-size: 30px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    /* line 19, E:\GitHub\gswat-node\less\structure.less */
+    .subhead {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        text-align: left;
+    }
 }
-/* line 31, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
+/* line 26, E:\GitHub\gswat-node\less\structure.less */
 i {
-  margin-right: 5px;
+    margin-right: 5px;
 }
-/* line 35, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
+/* line 30, E:\GitHub\gswat-node\less\structure.less */
 #header-alert {
-  position: absolute;
-  width: 100%;
+    position: absolute;
+    width: 100%;
 }
-/* line 40, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
+/* line 35, E:\GitHub\gswat-node\less\structure.less */
 #header-alert {
-  display: none;
+    display: none;
 }
-/* line 43, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
+/* line 38, E:\GitHub\gswat-node\less\structure.less */
 #header-alert .container {
-  padding: 20px 0 0;
-  width: 25%;
+    padding: 20px 0 0;
+    width: 25%;
 }
-/* line 49, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
+/* line 44, E:\GitHub\gswat-node\less\structure.less */
 .actions {
-  text-align: right;
+    text-align: right;
 }
-/* line 52, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
+/* line 47, E:\GitHub\gswat-node\less\structure.less */
 .actions.row {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
-/* line 56, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
+/* line 51, E:\GitHub\gswat-node\less\structure.less */
 .actions .btn:not(:first-of-type) {
-  margin-left: 5px;
+    margin-left: 5px;
 }
-/* line 62, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
+/* line 57, E:\GitHub\gswat-node\less\structure.less */
 form.form-horizontal .btn {
-  margin-right: 5px;
+    margin-right: 5px;
 }
-/* line 67, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
+/* line 62, E:\GitHub\gswat-node\less\structure.less */
 form.form-horizontal .input-url .input-group-addon {
-  word-break: keep-all;
+    word-break: keep-all;
 }
-/* line 72, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
+/* line 67, E:\GitHub\gswat-node\less\structure.less */
 form.form-horizontal .form-actions {
-  padding-top: 10px;
+    padding-top: 10px;
 }
-/* line 78, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
-.player-name {
-  font-weight: bold;
-}
-/* line 82, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
-.team {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-/* line 86, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
-.team .squad {
-  color: #28AE00;
-}
-/* line 91, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
-#chatContents {
-  overflow: scroll;
-  overflow-x: visible;
-  overflow-y: scroll;
-}
-/* line 96, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
-#chatContents p {
-  margin: 0 0 2px;
-}
-/* line 101, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
-#chat-quick-settings {
-  position: absolute;
-  z-index: 5;
-  display: none;
-}
-/* line 109, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
-#server-chat-page #chat-settings h2 {
-  display: none;
-}
-/* line 114, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
-#server-chat-page .grid.page-region {
-  margin: 0;
-}
-/* line 119, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
-#server-chat-page .hide-server-msgs .server-message {
-  display: none;
-}
-/* line 126, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
-.team.team-RU {
-  color: #CE2323;
-}
-/* line 130, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
-.team.team-US {
-  color: #0000ff;
-}
-/* line 137, C:\Users\JT\Documents\Projects\gswat-node\less\structure.less */
+/* line 74, E:\GitHub\gswat-node\less\structure.less */
 footer .pull-right a {
-  padding-left: 5px;
+    padding-left: 5px;
 }

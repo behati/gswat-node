@@ -5,6 +5,8 @@
 				'click .btn': 'activate'
 			},
 
+			title: 'Map Rotation',
+
 			id: 'map-rotation',
 
 			initialize: function(){

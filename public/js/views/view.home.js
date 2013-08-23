@@ -3,6 +3,8 @@
 		home: Backbone.View.extend({
 			id: 'home',
 
+			title: 'GSWAT Home',
+
 			render: function(){
 				this.$el.html(ich.tpl_home());
 			}

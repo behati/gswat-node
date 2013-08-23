@@ -1,13 +1,15 @@
 .navbar.navbar-inverse.navbar-fixed-top
 	.container
-		a.navbar-brand(href='#home')
-			| {{name}}
-			small  {{version}}
-		button.navbar-toggle(data-target='.nav-collapse', data-toggle='collapse', type='button')
-			span.icon-bar
-			span.icon-bar
-			span.icon-bar
-		.nav-collapse.navbar-inverse-collapse.collapse
+		.navbar-header
+			a.navbar-brand(href='#home')
+				| {{name}}
+				small  {{version}}
+			button.navbar-toggle(data-target='.navbar-collapse', data-toggle='collapse', type='button')
+				span.sr-only Toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+		nav.collapse.navbar-collapse.navbar-inverse-collapse(role='navigation')
 			ul.nav.navbar-nav
 				li
 					a(href='#home')

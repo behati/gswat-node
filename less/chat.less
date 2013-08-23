@@ -1,0 +1,100 @@
+﻿#server-chat-page {
+	position: relative;
+
+	.page-header {
+		margin: 0 0 20px;
+
+		h1 {
+			margin-top: 0;
+		}
+	}
+
+	#chat-quick-settings {
+		position:absolute;
+		z-index:5;
+		display:none;
+		top: 40px;
+		width: 100%;
+		background: #FFF;
+		border-bottom: 1px solid #e5e5e5;
+		padding-bottom:10px;
+	}
+
+    #chat-settings {
+        h2 {
+            display:none;
+        }
+    }
+
+	.hide-server-msgs {
+		.server-message {
+			display: none;
+		}
+	}
+
+	.hide-us-msgs {
+		.team-US {
+			display: none;
+		}
+	}
+
+	.hide-ru-msgs {
+		.team-RU {
+			display: none;
+		}
+	}
+
+	.hide-global-msgs {
+		.team-all {
+			display: none;
+		}
+	}
+
+	.hide-squad-msgs{
+		.squad {
+			display: none;
+		}
+	}
+
+	.player-name {
+		font-weight: bold;
+	}
+
+	.team {
+		font-weight: bold;
+		text-transform:uppercase;
+
+		.squad {
+			color: #28AE00;
+		}
+
+		&.team-RU {
+			color: #CE2323;
+		}
+
+		&.team-US {
+			color: #0000ff;
+		}
+	}
+
+	#chat-contents-ul {
+		margin: 0;
+		list-style:none;
+	}
+
+	#chat-contents {
+		overflow:scroll;
+		overflow-x:visible;
+		overflow-y:scroll;
+		min-height: 200px;
+		max-height: 600px;
+
+		p {
+			margin: 0 0 2px;
+		}
+
+		li {
+			margin: 0 0 2px;
+		}
+	}
+}

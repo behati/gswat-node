@@ -1,40 +1,43 @@
 #quick-settings.row
-	ul.nav.nav-pills.pull-left
-		li
-			a#chat-force-refresh(href='#')
-				span
-					i.icon-retweet
-					| Refresh
-		li
-			a(href='#settings')
-				| Server IP:
-				span#server-ip {{ServerIP}}
-		ul.nav.nav-pills.pull-right
+	.col-lg-12
+		ul.nav.nav-pills
 			li
-				a#chat-toggle-options.place-right(href='#')
+				a#chat-force-refresh(href='#')
 					span
-						i.icon-cogs
-						| Options & Archives
-	#chat-quick-settings.row
-		.page-header
-			h1 Quick Settings
-		.page-content
-			.span5
-				form#historical-chat-form.form-horizontal
-					fieldset
-						legend Load past history
-						.control-group
-							label(for='chat-date') Loading past logs will disable chat auto-refresh
-							input#chat-date-input(type='text', name='chat-date', placeholder='Enter Date (MM/DD/YYYY)')
-						.control-group
-							button#load-archive.btn.archive-btn(type='submit') Load
-							button#save-archive.btn.archive-btn(type='button') Save
-						iframe#download-chat-iframe(src='{{iframe_url}}', style='display: none;')
-			.span7
-				#chat-settings
-	.row
+						i.icon-refresh
+						| Refresh
+			li
+				a(href='#settings')
+					i.icon-laptop
+					| Server IP:
+					span#server-ip {{ServerIP}}
+			ul.nav.nav-pills.pull-right
+				li
+					a#chat-toggle-options.place-right(href='#')
+						span
+							i.icon-cogs
+							| Options & Archives
+#chat-quick-settings
+	.page-header
+		h1 Quick Settings
+	.col-12.col-lg-5
+		form#historical-chat-form.form-horizontal
+			fieldset
+				legend Load past history
+				label(for='chat-date') Loading past logs will disable chat auto-refresh
+				.input-group
+					input#chat-date-input.input-block-level.form-control(type='text', name='chat-date', placeholder='Enter Date (MM/DD/YYYY)')
+					span.input-group-btn
+						button#load-archive.btn.archive-btn(type='submit') Load
+						button#save-archive.btn.archive-btn(type='button') Save
+				iframe#download-chat-iframe(src='{{iframe_url}}', style='display: none;')
+	.col-12.col-lg-7
+		#chat-settings
+.row
+	.col-lg-12
 		.page-header
 			h1 Server Chat
-	.row
+.row
+	.col-lg-12
 		#chat-contents(class='{{^message_filters.show_server_msgs}}hide-server-msgs{{/message_filters.show_server_msgs}}{{^message_filters.show_global_msgs}} hide-global-msgs{{/message_filters.show_global_msgs}}{{^message_filters.show_us_msgs}} hide-us-msgs{{/message_filters.show_us_msgs}}{{^message_filters.show_ru_msgs}} hide-ru-msgs{{/message_filters.show_ru_msgs}}{{^message_filters.show_squad_msgs}} hide-squad-msgs{{/message_filters.show_squad_msgs}}')
 			ul#chat-contents-ul

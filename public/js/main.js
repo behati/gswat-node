@@ -11,11 +11,11 @@ window.requestAnimFrame = (function(){
 		};
 }());
 
-_.extend(window,{
+$.extend(window,{
 	GSWAT: null
 });
 
-(function(window,document,$,_,yepnope,undefined){
+(function(window,document,$){
 	GSWAT = function(){
 		// Object Variables
 		this.view_instances = {};
@@ -26,7 +26,8 @@ _.extend(window,{
 		this.CDN = '';
 		this.files_loaded = [];
 		this.timers = {};
-		this.Lib = Lib || undefined;
+		this.title = 'GSWAT';
+		this.Lib = Lib || false;
 	};
 
 	// Private functions
@@ -114,9 +115,10 @@ _.extend(window,{
 			var name = view_data.name;
 			var view = this.view_definitions[name];
 			if(view_data.options){
-				_.each(view_data.options,function(value,option){
+				for(var option in view_data.options){
+					var value = view_data.options[option];
 					view[option] = value;
-				});
+				}
 			}
 			var model = model_data && !(model_data instanceof Backbone.Model) ? this.get_model(model_data) : model_data;
 			var collection = collection_data && !(collection_data instanceof Backbone.Collection) ? this.get_collection(collection_data) : collection_data;
@@ -165,27 +167,32 @@ _.extend(window,{
 		},
 
 		render: function(view,persist){
-			if(!_.isUndefined(this.current_view) && !persist){
+			if(typeof this.current_view !== 'undefined' && !persist){
 				var old_view = this.get({view: {name: this.current_view}});
 				old_view.remove();
 				delete this.view_instances[this.current_view];
 			}
 			this.current_view = view.name;
+			document.title = view.title || this.title;
 			view.render();
 			this.$el.html(view.el);
 		},
 
 		set_options: function(options){
 			var scope = this;
-			$.each(options,function(index,option){
+			for (var index in options) {
+				var option = options[index];
 				scope[index] = option;
-			});
+			}
 			this.$el = $(this.main_ele);
 		},
 
 		init: function(options){
-			if(!_.isUndefined(this.Lib)){
-				_.extend(this,new this.Lib());
+			if(this.Lib){
+				var lib = new this.Lib();
+				for(var i in lib){
+					this[i] = lib[i];
+				}
 			}
 			var _super = Backbone.View.prototype.remove;
 			Backbone.View.prototype.remove = function(){
@@ -194,7 +201,7 @@ _.extend(window,{
 			};
 
 			this.set_options(options);
-			if(window.location.hash == undefined || window.location.hash == ''){
+			if(typeof window.location.hash === 'undefined' || window.location.hash == ''){
 				window.location.hash = this.default_route;
 			}
 			this.active_router = new this.router();
@@ -203,9 +210,9 @@ _.extend(window,{
 	};
 
 	// Global objects for our views/models/collections/events
-	_.extend(GSWAT.prototype,{
+	$.extend(GSWAT.prototype,{
 		view_definitions      : {},
 		model_definitions     : {},
 		collection_definitions: {}
 	});
-}(window,document,jQuery,_,yepnope));
+}(window,document,jQuery));
